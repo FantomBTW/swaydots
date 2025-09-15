@@ -7,6 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+	"custom/launcher",
         "sway/window",
         "sway/mode",
         "custom/media"
@@ -31,25 +32,13 @@
         "battery#bat2",
         "clock",
         "tray"
-//        "custom/power"
-    ],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+],
+
+    "custom/launcher": {
+	"format":"<span size='x-large'>󰣇</span>",
+	"on-click": "exec wofi --show drun"
+    },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
